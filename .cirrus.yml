@@ -1,23 +1,23 @@
 env:
-  TZ: "Asia/Jakarta"
+  TZ: "Asia/Hong_Kong"
   LANG: "C.UTF-8"
   LC_ALL: "C"
   
   # Kernel
-  DEVICE_CODENAME: "chime"
-  BUILD_USER: "admin"
-  BUILD_HOST: "mrtproject"
-  KERNEL_SOURCE: "https://github.com/anggitmrt87/valeryn_xiaomi_sm6115.git"
-  KERNEL_BRANCH: "staging"
-  DEVICE_DEFCONFIG: "vendor/bengal-perf_defconfig vendor/xiaomi/sm6115.config vendor/xiaomi/lime.config"
+  DEVICE_CODENAME: "a21s"
+  BUILD_USER: "lua"
+  BUILD_HOST: "arch"
+  KERNEL_SOURCE: "https://github.com/sqldown/atlas.git"
+  KERNEL_BRANCH: "master"
+  DEVICE_DEFCONFIG: "exynos850-a21snsxx_defconfig"
   ANYKERNEL: "https://github.com/greenforce-project/AnyKernel3"
   
   # Telegram Encrypted Secrets
-  TG_TOKEN: "ENCRYPTED[d9185ab32fea60b59b9caac7865c156001691d0c6c87c825c32a3db288ed566a8ac07cfe7ff445fb2c0e61f57c06b486]"
-  TG_CHAT_ID: "ENCRYPTED[d1175d4be5c2ebcb2ce25c91ec7c71abeb738d22d563c4fc0afdb9f528c2d6997b98e29309468198038eb159cc709e91]"
+  TG_TOKEN: "ENCRYPTED[!9edcd3081be002db985bb813ca9d803aef002564bcca2a513a4b35e96374c1c5dd11ba6fb118abf024f61db4babc334a!]"
+  TG_CHAT_ID: "ENCRYPTED[!693f768ca576838abbb036f8efd169321f2a7f8c2d10a43ecfd74048c66b538a8eda467cf205630b31e60b7023a224bd!]"
 
   # Toolchain Configuration
-  USE_CLANG: "aosp" # "aosp" or "greenforce"
+  USE_CLANG: "greenforce" # "aosp" or "greenforce"
   CLANG_ROOTDIR: "/tmp/cirrus-ci-build/clang"
   AOSP_CLANG_URL: "https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/603a89415bbb04dff8bc577b95534479ec13fdc5/clang-r574158.tar.gz"
   GREENFORCE_CLANG_URL: "https://github.com/greenforce-project/greenforce_clang/releases/download/20251012/gf-clang-22.0.0git-20251012.tar.gz"
