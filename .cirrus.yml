@@ -42,7 +42,7 @@ env:
   
   # New: Enhanced logging and debugging
   DEBUG_MODE: "false"
-  KEEP_BUILD_LOGS: "false"
+  KEEP_BUILD_LOGS: "true"
 
 task:
   name: "Kernel Build"
