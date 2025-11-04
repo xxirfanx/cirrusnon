@@ -103,9 +103,16 @@ case "$USE_CLANG" in
         verify_download "$TEMP_DIR/$local_archive_name"
         strip_components_count=1
         ;;
+
+     "clang21")
+        local_archive_name="CLANG21-clang.tar.gz"
+        download_with_retry "$CLANG21_CLANG_URL" "$local_archive_name"
+        verify_download "$TEMP_DIR/$local_archive_name"
+        strip_components_count=1
+        ;;
     
     *)
-        handle_error "Invalid USE_CLANG value: '$USE_CLANG'. Must be 'aosp' or 'greenforce'"
+        handle_error "Invalid USE_CLANG value: '$USE_CLANG'. Must be 'aosp' or 'greenforce' or 'clang21'"
         ;;
 esac
 
