@@ -65,7 +65,7 @@ task:
 
   update_script:
     - apt-get update
-    - apt-get install -y aria2 ccache libssl-dev ncurses-dev flex bison p7zip cpio xz-utils locales libtinfo5
+    - apt-get install -y aria2 ccache libssl-dev ncurses-dev flex bison p7zip-full cpio xz-utils locales libtinfo5
     - echo 'en_US.UTF-8 UTF-8' > /etc/locale.gen && /usr/sbin/locale-gen
     - ln -snf /usr/share/zoneinfo/"$TZ" /etc/localtime && echo "$TZ" > /etc/timezone
     - apt-get clean

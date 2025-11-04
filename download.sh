@@ -108,7 +108,7 @@ case "$USE_CLANG" in
         local_archive_name="CLANG21-clang.7z"
         download_with_retry "$CLANG21_CLANG_URL" "$local_archive_name"
         verify_download "$TEMP_DIR/$local_archive_name"
-        strip_components_count=0
+        strip_components_count=2
         ;;
     
     *)
@@ -117,7 +117,7 @@ case "$USE_CLANG" in
 esac
 
 echo "📁 Extracting toolchain (strip-components=$strip_components_count)..."
-if tar -a -xf "$TEMP_DIR/$local_archive_name" -C "$CLANG_ROOTDIR" --strip-components=$strip_components_count; then
+if tar x "$TEMP_DIR/$local_archive_name" -O "$CLANG_ROOTDIR" --strip-components=$strip_components_count; then
     echo -e "${GREEN}✅ Toolchain extracted successfully${NC}"
 else
     handle_error "Failed to extract toolchain archive"
