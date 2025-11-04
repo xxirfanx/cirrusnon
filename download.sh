@@ -105,7 +105,7 @@ case "$USE_CLANG" in
         ;;
 
      "clang21")
-        local_archive_name="CLANG21-clang.tar.gz"
+        local_archive_name="CLANG21-clang.7z"
         download_with_retry "$CLANG21_CLANG_URL" "$local_archive_name"
         verify_download "$TEMP_DIR/$local_archive_name"
         strip_components_count=1
