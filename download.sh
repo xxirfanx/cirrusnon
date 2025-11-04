@@ -117,7 +117,7 @@ case "$USE_CLANG" in
 esac
 
 echo "📁 Extracting toolchain (strip-components=$strip_components_count)..."
-if tar -xf "$TEMP_DIR/$local_archive_name" -C "$CLANG_ROOTDIR" --strip-components=$strip_components_count; then
+if 7z -xf "$TEMP_DIR/$local_archive_name" -C "$CLANG_ROOTDIR" --strip-components=$strip_components_count; then
     echo -e "${GREEN}✅ Toolchain extracted successfully${NC}"
 else
     handle_error "Failed to extract toolchain archive"
