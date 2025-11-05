@@ -108,7 +108,7 @@ case "$USE_CLANG" in
         local_archive_name="CLANG21-clang.tar"
         download_with_retry "$CLANG21_CLANG_URL" "$local_archive_name"
         verify_download "$TEMP_DIR/$local_archive_name"
-        strip_components_count=2
+        strip_components_count=0
         ;;
     
     *)
